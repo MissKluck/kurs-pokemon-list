@@ -1,4 +1,4 @@
-import { pokemonList } from "./pokemonData.js";
+import { pokemonList } from './pokemonData.js';
 
 //  How to access individual fields of object
 //const sigrid = {
@@ -17,16 +17,17 @@ for (const pokemon of pokemonList.results) {
   const newElement = createPokemonCard(pokemon);
 
   //Sett inn i dokument
-  const list = document.getElementById("pokemon-list");
+  const list = document.getElementById('pokemon-list');
   list.appendChild(newElement);
 }
 
-function createPokemonCard(name) {
-  const pokemonCard = document.createElement("li");
+function createPokemonCard(pokemon) {
+  const pokemonCard = document.createElement('li');
+  pokemonCard.className = 'pokemon-card';
 
-  const linkelement = document.createElement("a");
+  const linkelement = document.createElement('a');
   linkelement.textcontent = pokemon.name;
-  linkelement.href = `./details.html?pokemon=${pokemon.name} + ;
+  linkelement.href = `./details.html?pokemon=${pokemon.name}`;
 
   pokemonCard.appendChild(linkelement);
 
