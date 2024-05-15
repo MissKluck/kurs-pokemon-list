@@ -85,5 +85,3 @@ export const pokemonList = {
     },
   ],
 };
-
-pokemonList.results.array.forEach((element) => {});

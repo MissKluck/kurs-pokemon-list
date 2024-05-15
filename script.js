@@ -23,8 +23,12 @@ for (const pokemon of pokemonList.results) {
 
 function createPokemonCard(name) {
   const pokemonCard = document.createElement("li");
-  pokemonCard.textContent = pokemon.name;
-  pokemonCard.className = "pokemon-card";
+
+  const linkelement = document.createElement("a");
+  linkelement.textcontent = pokemon.name;
+  linkelement.href = `./details.html?pokemon=${pokemon.name} + ;
+
+  pokemonCard.appendChild(linkelement);
 
   return pokemonCard;
 }
